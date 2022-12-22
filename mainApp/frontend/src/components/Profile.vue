@@ -46,8 +46,10 @@
             }
         },
         methods:{
-            async updateUser(){
-                await this.getUsers();
+            async updateUser(request){
+                //await this.getUsers();
+                //get the id of the authenticated user
+                current_user = request.user
                 await fetch(`http://127.0.0.1:8000/api/users/${this.user.id}/`,{
                 method: 'put',
                 headers: {
@@ -55,9 +57,11 @@
                 },
                 body: JSON.stringify(this.user)  
                 });
-                await this.getUsers();
+                //await this.getUsers();
                 this.user = {};
-            },    
+            },
+            
+            // 
         }
     }
 </script>

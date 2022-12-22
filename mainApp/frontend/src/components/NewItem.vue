@@ -35,15 +35,14 @@
                     'itemStartPrice':'',
                     'itemPicture': '',
                     'itemFinishDate':'',
-                    //need to remove 2 just TESTING
                     'ownerId':'',      
                 }
             }
         },
         methods:{
-        //TODO need to link user session to ownerId in order to post
-        async addAuction(){
-            this.newAuction.ownerId = 2;
+        async addAuction(request){
+            current_user = request.user
+            this.ownerId = current_user.id
             await fetch("http://127.0.0.1:8000/api/auction/",{
           method: 'post',
           headers: {
