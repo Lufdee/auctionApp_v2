@@ -17,8 +17,8 @@
             </ul>
             
             <ul class="navbar-nav">
-            /// <button v-if ="(isLoggedIn !== '')" class = "btn btn-outline-success" type="button"
-                v-on:click="logout">Logout</button>
+            <a class = "btn btn-outline-success" type="button"
+                href="http://localhost:8000/api/logout/">Logout</a>
             <a class="btn btn-outline-success" type ="button" href="http://localhost:8000/api/login/">Login</a>
             </ul>
         </div>
@@ -31,14 +31,10 @@
     export default {
         data() {
             return {
-                /// isLoggedIn: getCookie('login'),
+                loggedIn: '',
             }
         },
-        methods: {
-            async getCookie(name){
-                ck = request.COOKIES[name]
-                return ck
-            },
+        methods:{
         }
     }
 </script>

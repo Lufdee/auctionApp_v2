@@ -76,7 +76,7 @@ def signup_view(request: HttpRequest):
             user = auth.authenticate(username=username, password=password, )
             if user is not None:
                 auth.login(request, user)
-                response:HttpResponse = HttpResponseRedirect('/')
+                response:HttpResponse = HttpResponseRedirect('http://localhost:5173/')
                 response.set_cookie('login', 'true')
                 return response
             return Http404()
@@ -103,11 +103,10 @@ def login_view(request: HttpRequest):
                 form.add_error('password', 'Invalid credentials')
             if user is not None:
                 auth.login(request, user)
-                response:SMTPResponseException = HttpResponseRedirect('http://localhost:5173/')
+                response:HTTPResponse = HttpResponseRedirect('http://localhost:5173/')
                 response.set_cookie('login', 'true')
-                response.session['login'] = True
                 return response
-            return Http404()
+            redirect('http:/localhost:8000/api/login/')
 
     return render(request, 'auth/login.html', {'form': form})
 
