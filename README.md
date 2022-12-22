@@ -44,10 +44,6 @@ Login Details:
 	- Username:	Password:
 	- user6 user6
 	- user8 user8
-	- user3 passwordforuser3
 	- user1 user1
 	- user2 user2
-	- user7 user7
-	- user9 user9
-	- user4 user4
-	- user5 user5
+	- user3 user3
