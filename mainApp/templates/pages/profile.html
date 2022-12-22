@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    {% include 'components/profile.html' %}
+    <div class='h5 mt-4'>
+        Edit profile and/or click on image to update
+    </div>
+    <form id='upload_form' method='POST' action="{% url 'profile' %}" enctype='multipart/form-data'>
+        <div class='form-group'>
+            {% csrf_token %}
+            <textarea class="form-control" name='text' rows='4'>{{ profile.text }}</textarea>
+            <input type="file" name="profile_img">
+            <button type='submit' class="btn btn-primary mt-3">Save</button>
+        </div>
+    </form>
+{% endblock %}
