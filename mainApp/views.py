@@ -1,4 +1,5 @@
 from http.client import HTTPResponse
+from smtplib import SMTPResponseException
 from urllib import request, response
 from django.contrib.auth import authenticate, login, views
 from django.shortcuts import render
@@ -102,8 +103,9 @@ def login_view(request: HttpRequest):
                 form.add_error('password', 'Invalid credentials')
             if user is not None:
                 auth.login(request, user)
-                response:HttpResponse = HttpResponseRedirect('http://localhost:5173/')
+                response:SMTPResponseException = HttpResponseRedirect('http://localhost:5173/')
                 response.set_cookie('login', 'true')
+                response.session['login'] = True
                 return response
             return Http404()
 

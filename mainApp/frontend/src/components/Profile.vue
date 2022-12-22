@@ -12,11 +12,7 @@
                 <br/>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" v-model="user.userEmail"/>
                 <br/>
-                <input type="text" id="inputUser" class="form-control" placeholder="Username" v-model="user.username"/>
-                <br/>
                 <input type="date" id="inputDOB" class="form-control" v-model="user.userDateOfBirth"/>
-                <br/>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required v-model="user.password"/>
                 <br/>
                 <div class="d-grid gap-2 col-8 mx-auto">
                     <button class="btn btn-primary" type="submit" @click = "updateUser()">Save Changes</button>
@@ -46,10 +42,10 @@
             }
         },
         methods:{
-            async updateUser(request){
+            async updateUser(){
                 //await this.getUsers();
                 //get the id of the authenticated user
-                current_user = request.user
+                this.user.id = this.$session.get('user_id')
                 await fetch(`http://127.0.0.1:8000/api/users/${this.user.id}/`,{
                 method: 'put',
                 headers: {
