@@ -8,7 +8,9 @@
             <div class="border rounded bg-light p-5 ">
                 <h1 class="h3 mb-4">Edit Profile</h1>
                 <br/>
-                <input type="url" id="inputTitle" class="form-control" placeholder="Item Image (Link)" v-model="user.userImage"/>
+                <img :src="user.userImage.substring(39)" width="500"/>
+                <br/>
+                <input type="file" id="inputPicture" class="form-control" accept="image/*" v-on:change="user.userImage"/>
                 <br/>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" v-model="user.userEmail"/>
                 <br/>

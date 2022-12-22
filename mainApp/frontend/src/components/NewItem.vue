@@ -9,7 +9,7 @@
                     <br/>
                     <textarea id="inputDescription" class="form-control" placeholder="Item Description" v-model="newAuction.itemDescription"/>
                     <br/>
-                    <input type="url" id="inputTitle" class="form-control" placeholder="Item Image (Link)" v-model="newAuction.itemPicture"/>
+                    <input type="file" id="inputPicture" class="form-control" accept="image/*" v-on:change="newAuction.itemPicture"/>
                     <br/>
                     <input type="date" id="inputEnd" class="form-control" required v-model="newAuction.itemFinishDate"/>
                     <br/>
