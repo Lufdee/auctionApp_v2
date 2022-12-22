@@ -46,10 +46,10 @@
         <div class="card">
           
           <textarea class="bg-light border border-black text-dark form-control" placeholder="Write your question here..."/>
-          <button type="button" class="btn btn-primary" v-bind:id="'questionBox'+auction.questionId" style="width:fit-content">Submit Question</button>
+          <button type="button" class="btn btn-primary" v-bind:id="'questionBox'+auction.questionId" style="max-width:150px;">Submit Question</button>
     
           <br/>
-          <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" :data-bs-target="'#collapse'+ auction.id" aria-expanded="false" aria-controls="collapseQuestion" style="max-width:300px;">Show Q&A</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" :data-bs-target="'#collapse'+ auction.id" aria-expanded="false" aria-controls="collapseQuestion" style="max-width:500px;">Show Q&A</button>
 
             <div class="collapse" :id="'collapse'+ auction.id" style="text-align:left" v-for="question in questions" :key="question.questionId">
               <br/>
