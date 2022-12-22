@@ -10,7 +10,6 @@
   <div class="row">
     <div class="input-group" style="margin-bottom:1rem;">
       <input type="search" class="form-control rounded" placeholder="Search" id="search" v-on:input="searchItem()" />
-      <button type="button" class="btn btn-outline-primary">Search</button>
     </div>
   </div>
 
@@ -47,14 +46,16 @@
         <div class="card">
           
           <textarea class="bg-light border border-black text-dark form-control" placeholder="Write your question here..."/>
-          <button type="button" class="btn btn-primary" v-bind:id="'questionBox'+auction.questionId">Submit Question</button>
+          <button type="button" class="btn btn-primary" v-bind:id="'questionBox'+auction.questionId" style="width:fit-content">Submit Question</button>
     
           <br/>
-          <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" :data-bs-target="'#collapse'+ auction.id" aria-expanded="false" aria-controls="collapseQuestion">Show Q&A</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" :data-bs-target="'#collapse'+ auction.id" aria-expanded="false" aria-controls="collapseQuestion" style="max-width:300px;">Show Q&A</button>
 
             <div class="collapse" :id="'collapse'+ auction.id" style="text-align:left" v-for="question in questions" :key="question.questionId">
               <br/>
+              
                 <div v-if="question.auctionId === auction.id">
+                  <hr/>
                   <h5 class="card-title">{{question.userId}}</h5>
                   <p>
                     {{question.questionText}}
@@ -71,10 +72,10 @@
                   <button type="button" class="btn btn-link" data-bs-toggle="collapse" :data-bs-target="'#collapseAnswer'+ question.id" aria-expanded="false" aria-controls="collapseAnswer">Reply</button>
                   <div class="collapse" :id="'collapseAnswer'+ question.id" >
                   <textarea class="bg-light border border-black text-dark form-control" placeholder="Write your answer here..."/>
-                  <button type="button" class="btn btn-primary" style="margin-left:85%; width:15%">Submit Answer</button>
+                  <button type="button" class="btn btn-primary float-end">Submit Answer</button>
                   </div>
-                  
-                  <hr/>
+   
+                
 
                 </div>
               
@@ -112,6 +113,7 @@ import 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.mi
           'userId': '',
         },
         auctions: [],
+        searchedAuctions: [],
         auction:{
           'itemTitle':'',
           'itemDescription':'',
