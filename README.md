@@ -19,7 +19,7 @@ Group Members and Assigned Work:
 -Tomas
 	- Drafted the database schema logic
 	- Created abstract user model, auction model
-	- Done most of the fetch functions and their linkage to vue components
+	- Done most of the fetch functions and their linkage to vue components(non functional due to session authentication not implemented fully and thus unable to link foreign keys to requests)
 	- Defined all serializers
 	- Defined all views
 	- Implemented search
@@ -30,6 +30,7 @@ Group Members and Assigned Work:
 	- Set tasks for everyone
 	- Organized all our work meetings
 	- Advised Tracey for frontend styling(conceptually), Api methods, model creation and routing
+	
 
 
 
