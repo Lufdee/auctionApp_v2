@@ -1,14 +1,5 @@
 # auctionApp
 
-Dependencies:
-- REST Framework
-- Cors Headers
-- Pillow
-- Bootstrap / Bootstrap-vue
-- Vue Router
-- Django Crispy Forms
-
-
 Group Members and Assigned Work:
 - Tracey: 
 	- Front End Pages (Vue Components)
