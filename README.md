@@ -16,6 +16,10 @@ Group Members and Assigned Work:
 	- Some (GET) fetch API methods 
 	- Model Creation
 	- Designed Page for List of Items + Q&A Section + Displaying data
+	- Displayed data for questions and answers using v-for if and show
+	- Created dynamic html elements based on model data
+	- Populated Database with users, auction items, questions, and answers
+	- Debugging 
 - Tomas:
 	- Drafted the database schema logic
 	- Created abstract user model, auction model
