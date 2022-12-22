@@ -28,11 +28,12 @@ Group Members and Assigned Work:
 	- Created data() fields for all frontend components
 	- Managed the team
 	- Set tasks for everyone
-	- Organized all our work meetings
+	- Organized meetings
 	- Advised Tracey for frontend styling(conceptually), Api methods, model creation and routing
 - Dinos:
 	- User models
 	- User auth views
+	- Debugger
 	- Authorization
 	- General advice
 	- Forms
@@ -44,13 +45,13 @@ Group Members and Assigned Work:
 
 Login Details:
 - Admin Login:
-	- Username: ad1
-	- Password: ad1
+	- Username: admin
+	- Password: admin
 
 - Users:
 	- Username:	Password:
-	- user6 user6
 	- user8 user8
 	- user1 user1
 	- user2 user2
 	- user3 user3
+	- use87 user87
